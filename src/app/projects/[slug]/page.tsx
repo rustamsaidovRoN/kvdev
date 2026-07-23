@@ -158,7 +158,6 @@ export default async function ProjectPage({
               </div>
               <Reveal delay={0.1} className="md:col-span-6 md:col-start-7">
                 <div className="overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={img(cityImageAlt, 1500)}
                     alt="Київ"
@@ -175,11 +174,10 @@ export default async function ProjectPage({
           href={`/projects/${next.slug}`}
           className="group relative block h-[62vh] overflow-hidden border-t border-hair"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={img(next.cover, 2000)}
             alt={next.name}
-            className="absolute inset-0 h-full w-full object-cover opacity-40 transition-all duration-[1200ms] ease-out group-hover:scale-105 group-hover:opacity-55"
+            className="absolute inset-0 h-full w-full object-cover opacity-40 transition-all [transition-duration:1200ms] ease-out group-hover:scale-105 group-hover:opacity-55"
           />
           <div className="absolute inset-0 bg-ink/40" />
           <div className="relative z-10 flex h-full flex-col items-center justify-center gap-5 text-center">
@@ -213,7 +211,6 @@ function GalleryImg({
   return (
     <Reveal className={className}>
       <div className={`overflow-hidden ${ratio}`}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={img(src, 1500)}
           alt={alt}

@@ -12,7 +12,6 @@ export function Stats() {
   return (
     <section className="relative overflow-hidden border-t border-hair">
       <div className="absolute inset-0 -z-10">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={img(cityImage, 2000)}
           alt="Київ на світанку"

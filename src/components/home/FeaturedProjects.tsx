@@ -27,11 +27,10 @@ function Row({ project, i }: { project: Project; i: number }) {
         >
           <div className="relative aspect-[16/11] overflow-hidden">
             <motion.div style={{ y }} className="absolute inset-0 h-[118%] w-full">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={img(project.cover, 1600)}
                 alt={project.name}
-                className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+                className="h-full w-full object-cover transition-transform [transition-duration:1200ms] ease-out group-hover:scale-105"
               />
             </motion.div>
             <div className="label absolute left-5 top-5 bg-ink/55 px-3 py-1.5 text-bone backdrop-blur-sm">

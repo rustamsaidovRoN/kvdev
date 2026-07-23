@@ -81,7 +81,6 @@ export function ProjectsIndex() {
         {projects.map((p) => (
           <Link key={p.slug} href={`/projects/${p.slug}`} className="group block">
             <div className="relative aspect-[4/3] overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={img(p.cover, 1200)}
                 alt={p.name}

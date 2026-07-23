@@ -25,7 +25,6 @@ export function Manifesto() {
           <div className="md:col-span-7">
             <Reveal>
               <div className="overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={img(manifestoImage, 1500)}
                   alt="Інтер'єр резиденції KV DEV"

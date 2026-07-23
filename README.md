@@ -35,6 +35,21 @@ Run the production build locally:
 npm start
 ```
 
+## Deploy
+
+The production site is deployed on Vercel from the GitHub repository.
+
+Vercel should use the standard Next.js settings:
+
+- Framework preset: Next.js
+- Install command: `npm install`
+- Build command: `npm run build`
+- Output directory: leave as the Vercel default for Next.js
+
+Environment variables are not required at the moment. If they are added later,
+document their names in `.env.example` and set the real values in Vercel Project
+Settings.
+
 ## Project structure
 
 - `src/app` — pages, layouts, and global styles.

@@ -45,7 +45,6 @@ export default function ContactsPage() {
           <div className="mx-auto max-w-edge px-5 md:px-10">
             <Reveal>
               <div className="relative overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={img(cityImageAlt, 2000)}
                   alt="Київ"

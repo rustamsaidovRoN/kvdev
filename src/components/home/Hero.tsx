@@ -23,7 +23,6 @@ export function Hero() {
     >
       {/* background */}
       <motion.div style={{ y }} className="absolute inset-0 -z-10">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={img(heroImage, 2400)}
           alt="Преміальна архітектура KV DEV"

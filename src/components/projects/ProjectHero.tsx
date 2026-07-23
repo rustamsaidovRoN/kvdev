@@ -22,7 +22,6 @@ export function ProjectHero({ project }: { project: Project }) {
       className="relative flex min-h-[100svh] w-full flex-col overflow-hidden"
     >
       <motion.div style={{ y }} className="absolute inset-0 -z-10">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={img(project.cover, 2400)}
           alt={project.name}
