@@ -85,8 +85,9 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.75, ease: EASE }}
           className="mt-8 max-w-xl text-[15px] leading-relaxed text-bone/75 md:text-base"
         >
-          Ми створюємо житлові простори класу de luxe у Києві, де форма, світло
-          й матеріал підпорядковані одному — досконалості життя.
+          Ми створюємо житлові простори класу de luxe у Києві та передмісті.
+          Там, де форма, локація й матеріал підпорядковані одному — ідеї
+          досконалості життя.
         </motion.p>
 
         <motion.div
