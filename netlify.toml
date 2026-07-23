@@ -1,6 +1,0 @@
-[images]
-  remote_images = ["https://source.unsplash.com/.*", "https://images.unsplash.com/.*"]
-
-[build]
-  command = "npm run build"
-  publish = ".next"
