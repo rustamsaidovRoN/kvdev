@@ -11,7 +11,7 @@ export function Footer() {
           <div className="md:col-span-5">
             <Logo />
             <p className="mt-7 max-w-xs text-[14px] leading-relaxed text-bone-muted">
-              Девелопер житлової нерухомості класу de luxe. Створюємо
+              Девелопер житлової нерухомості класу De Luxe. Створюємо
               архітектуру, що переживає час, — від {site.founded} року.
             </p>
             <div className="mt-8 space-y-1.5">
@@ -27,9 +27,6 @@ export function Footer() {
               >
                 {site.email}
               </a>
-              <p className="pt-2 text-[12px] uppercase tracking-[0.16em] text-bone-dim">
-                {site.address}
-              </p>
             </div>
           </div>
 

@@ -8,7 +8,7 @@ import { CtaBand } from "@/components/site/CtaBand";
 export const metadata: Metadata = {
   title: "Проєкти | KV DEV",
   description:
-    "Портфель KV DEV: клубні будинки, резиденції та квартали класу de luxe у знакових локаціях Києва.",
+    "Портфель KV DEV: клубні будинки, резиденції та квартали класу De Luxe у знакових локаціях Києва.",
 };
 
 export default function ProjectsPage() {

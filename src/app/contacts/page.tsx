@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Контакти | KV DEV",
   description:
-    "Зв'яжіться з KV DEV — телефон, email та адреса шоуруму в Києві. Залиште заявку на приватну зустріч.",
+    "Зв'яжіться з KV DEV — телефон, email та заявка на приватну зустріч.",
 };
 
 export default function ContactsPage() {
@@ -53,9 +53,6 @@ export default function ContactsPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />
                 <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8">
                   <div className="label text-bone/80">{site.city}</div>
-                  <div className="mt-1 font-display text-2xl font-light text-bone md:text-3xl">
-                    {site.addressShort}
-                  </div>
                 </div>
               </div>
             </Reveal>

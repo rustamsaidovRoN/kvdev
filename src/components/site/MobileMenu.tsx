@@ -95,9 +95,6 @@ export function MobileMenu({ onClose }: { onClose: () => void }) {
             >
               {site.email}
             </a>
-            <p className="mt-3 text-[12px] uppercase tracking-[0.16em] text-bone-dim">
-              {site.address}
-            </p>
           </div>
         </div>
       </div>

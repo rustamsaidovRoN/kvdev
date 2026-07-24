@@ -2,10 +2,10 @@ import { Reveal } from "@/components/motion/Reveal";
 import { cityImage, img } from "@/lib/projects";
 
 const STATS = [
-  { value: "17", label: "років на ринку" },
-  { value: "14", label: "реалізованих проєктів" },
-  { value: "320K", label: "м² збудовано" },
-  { value: "06", label: "районів Києва" },
+  { value: "9", label: "років на ринку" },
+  { value: "7", label: "локацій Києва та передмістя" },
+  { value: "45K", label: "м² забудови" },
+  { value: "03", label: "активних проєкти" },
 ];
 
 export function Stats() {

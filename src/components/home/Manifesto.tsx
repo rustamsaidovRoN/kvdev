@@ -16,8 +16,8 @@ export function Manifesto() {
         <Reveal delay={0.05}>
           <h2 className="mt-10 max-w-5xl text-balance font-display font-light leading-[1.06] text-[clamp(1.9rem,4.7vw,4.1rem)]">
             Кожен проєкт — це{" "}
-            <span className="italic text-gold-soft">діалог</span> між містом,
-            людиною та часом.
+            <span className="italic text-gold-soft">діалог</span> між
+            локацією, людиною та часом.
           </h2>
         </Reveal>
 
@@ -38,20 +38,26 @@ export function Manifesto() {
             <Reveal delay={0.1}>
               <p className="text-[15px] leading-relaxed text-bone-muted">
                 Ми віримо, що дім — це не квадратні метри, а середовище, яке
-                формує щоденний ритм людини. Тому кожне рішення — від посадки
-                будівлі до фактури дверної ручки — ми приймаємо свідомо.
+                формує щоденний ритм людини. Тому кожне рішення — від
+                проєктування будівлі до фактури дверної ручки — ми приймаємо
+                свідомо.
               </p>
             </Reveal>
             <Reveal delay={0.18}>
               <p className="text-[15px] leading-relaxed text-bone-muted">
-                За сімнадцять років ми реалізували проєкти в найзнаковіших
-                локаціях Києва разом із провідними архітекторами та майстрами.
-                Результат — будинки, що з роками стають лише цінніші.
+                За дев'ять років ми реалізували проєкти в найзнаковіших
+                локаціях передмістя та центра Києва разом із провідними
+                архітекторами та майстрами. Результат — резиденції, що з
+                роками стають лише цінніші.
+              </p>
+              <p className="mt-5 text-[15px] leading-relaxed text-bone-muted">
+                Наша задача — капіталізація локації, архітектури та цінностей
+                резидентів.
               </p>
             </Reveal>
             <Reveal delay={0.26}>
               <p className="pt-4 font-display text-2xl font-light italic text-bone">
-                — Засновники KV DEV
+                — Засновник KV DEV
               </p>
             </Reveal>
           </div>

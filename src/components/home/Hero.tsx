@@ -53,7 +53,7 @@ export function Hero() {
           className="label mb-6 flex items-center gap-4 text-gold"
         >
           <span className="h-px w-8 bg-gold/60" />
-          Київ · Девелопмент · з 2008
+          Київ · Девелопмент · з 2018
         </motion.div>
 
         <h1 className="font-display font-light leading-[0.9] tracking-[-0.01em] text-[clamp(2.9rem,9.2vw,9.5rem)]">
@@ -85,7 +85,7 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.75, ease: EASE }}
           className="mt-8 max-w-xl text-[15px] leading-relaxed text-bone/75 md:text-base"
         >
-          Ми створюємо житлові простори класу de luxe у Києві та передмісті.
+          Ми створюємо житлові простори класу De Luxe у Києві та передмісті.
           Там, де форма, локація й матеріал підпорядковані одному — ідеї
           досконалості життя.
         </motion.p>

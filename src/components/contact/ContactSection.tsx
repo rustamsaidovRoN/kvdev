@@ -22,6 +22,8 @@ type FormState = {
 
 export function ContactSection({ index = "04" }: { index?: string }) {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
   const [form, setForm] = useState<FormState>({
     name: "",
     phone: "",
@@ -35,9 +37,39 @@ export function ContactSection({ index = "04" }: { index?: string }) {
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
       setForm((f) => ({ ...f, [k]: e.target.value }));
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
+      setSent(true);
+      setForm({
+        name: "",
+        phone: "",
+        email: "",
+        interest: INTERESTS[0],
+        message: "",
+      });
+    } catch {
+      setError(
+        "Не вдалося надіслати заявку. Будь ласка, спробуйте ще раз або зв'яжіться з нами телефоном.",
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -56,7 +88,7 @@ export function ContactSection({ index = "04" }: { index?: string }) {
             </h2>
             <p className="mt-7 max-w-md text-[15px] leading-relaxed text-bone-muted">
               Залиште заявку — персональний менеджер зв'яжеться з вами протягом
-              робочого дня, щоб домовитися про приватну зустріч у шоурумі.
+              робочого дня, щоб домовитися про приватну зустріч.
             </p>
           </Reveal>
 
@@ -72,7 +104,6 @@ export function ContactSection({ index = "04" }: { index?: string }) {
                   {site.email}
                 </a>
               </ContactRow>
-              <ContactRow label="Шоурум">{site.address}</ContactRow>
               <ContactRow label="Години">{site.hours}</ContactRow>
             </dl>
 
@@ -128,7 +159,7 @@ export function ContactSection({ index = "04" }: { index?: string }) {
                   <Field
                     label="Телефон"
                     type="tel"
-                    placeholder="+380"
+                    placeholder="+38"
                     value={form.phone}
                     onChange={update("phone")}
                     required
@@ -181,11 +212,17 @@ export function ContactSection({ index = "04" }: { index?: string }) {
 
                 <button
                   type="submit"
+                  disabled={submitting}
                   className="label group inline-flex w-full items-center justify-between border border-bone/25 px-8 py-5 text-bone transition-colors hover:border-gold hover:bg-gold hover:text-ink sm:w-auto sm:gap-16"
                 >
-                  Надіслати заявку
+                  {submitting ? "Надсилаємо..." : "Надіслати заявку"}
                   <ArrowRight className="w-10 transition-transform duration-500 group-hover:translate-x-2" />
                 </button>
+                {error && (
+                  <p className="text-[13px] leading-relaxed text-gold-soft">
+                    {error}
+                  </p>
+                )}
               </form>
             )}
           </Reveal>
