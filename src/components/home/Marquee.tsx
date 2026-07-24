@@ -14,7 +14,7 @@ export function Marquee() {
   const row = [...ITEMS, ...ITEMS];
   return (
     <div className="overflow-hidden border-y border-hair bg-ink py-5">
-      <div className="flex w-max animate-marquee items-center">
+      <div className="flex w-max animate-marquee items-center will-change-transform">
         {row.map((t, i) => (
           <span key={i} className="flex items-center">
             <span className="label whitespace-nowrap px-8 text-bone/45">{t}</span>

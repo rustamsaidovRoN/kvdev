@@ -58,6 +58,10 @@ export default {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
         },
+        "soft-bounce": {
+          "0%, 100%": { transform: "translateY(0)", opacity: "0.65" },
+          "50%": { transform: "translateY(8px)", opacity: "1" },
+        },
         "k-zoom": {
           from: { transform: "scale(1.04)" },
           to: { transform: "scale(1.15)" },
@@ -66,7 +70,8 @@ export default {
       animation: {
         "fade-in": "fade-in 1.1s ease forwards",
         "fade-up": "fade-up 1s cubic-bezier(0.22,1,0.36,1) forwards",
-        marquee: "marquee 42s linear infinite",
+        marquee: "marquee 78s linear infinite",
+        "soft-bounce": "soft-bounce 2.8s cubic-bezier(0.45,0,0.55,1) infinite",
         "k-zoom": "k-zoom 16s ease-out forwards",
       },
     },

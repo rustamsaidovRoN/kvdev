@@ -97,7 +97,7 @@ export function Hero() {
           className="mt-12 flex items-end justify-between border-t border-hair pt-6"
         >
           <div className="flex items-center gap-3 text-bone/60">
-            <ArrowDown className="h-8 w-2 animate-bounce" />
+            <ArrowDown className="h-8 w-2 animate-soft-bounce" />
             <span className="label">Гортайте</span>
           </div>
           <div className="text-right">
