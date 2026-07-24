@@ -96,7 +96,7 @@ export const projects: Project[] = [
       "Підземний паркінг",
       "Смарт-інженерія",
     ],
-    cover: IMG.ex4,
+    cover: "/images/project-tykha-19-cover.png",
     gallery: [IMG.in1, IMG.ex6, IMG.in2, IMG.ct1],
   },
   {

@@ -42,6 +42,12 @@ export function ContactSection({ index = "04" }: { index?: string }) {
     setSubmitting(true);
     setError("");
 
+    if (!form.name.trim() || !form.phone.trim()) {
+      setError("Будь ласка, заповніть ім'я та телефон.");
+      setSubmitting(false);
+      return;
+    }
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -147,7 +153,7 @@ export function ContactSection({ index = "04" }: { index?: string }) {
                 </button>
               </div>
             ) : (
-              <form onSubmit={submit} className="space-y-8">
+              <form onSubmit={submit} noValidate className="space-y-8">
                 <div className="grid gap-8 sm:grid-cols-2">
                   <Field
                     label="Ім'я"
