@@ -79,6 +79,13 @@ export default async function ProjectPage({
                 <div className="label text-gold">Про проєкт</div>
               </Reveal>
               <div className="max-w-3xl space-y-7 md:col-span-8 md:col-start-5">
+                {project.descriptionTitle && (
+                  <Reveal>
+                    <h2 className="font-display font-light leading-[1.1] text-[clamp(2rem,4vw,3.6rem)]">
+                      {project.descriptionTitle}
+                    </h2>
+                  </Reveal>
+                )}
                 {project.description.map((par, i) => (
                   <Reveal key={i} delay={i * 0.08}>
                     <p className="text-[16px] leading-[1.9] text-bone/85 md:text-[18px]">
@@ -144,8 +151,8 @@ export default async function ProjectPage({
                     {project.district}
                   </h2>
                   <p className="mt-6 text-[15px] leading-relaxed text-bone-muted">
-                    {project.address}, Київ. Знакова локація з усталеною
-                    інфраструктурою, зеленню та швидким доступом до центру міста.
+                    {project.locationText ??
+                      `${project.address}, Київ. Знакова локація з усталеною інфраструктурою, зеленню та швидким доступом до центру міста.`}
                   </p>
                   <div className="mt-8 flex items-center gap-6 border-t border-hair pt-6">
                     <span className="label text-bone-dim">Статус</span>
