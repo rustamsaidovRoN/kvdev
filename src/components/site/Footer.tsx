@@ -74,20 +74,17 @@ export function Footer() {
           <span>© {new Date().getFullYear()} KV DEV. Усі права захищені.</span>
           <div className="flex items-center gap-6">
             {site.social.map((s) => (
-              <a
+              <span
                 key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noreferrer"
-                className="transition-colors hover:text-gold"
+                className="cursor-default select-text"
               >
                 {s.label}
-              </a>
+              </span>
             ))}
           </div>
-          <a href="#" className="transition-colors hover:text-gold">
+          <span className="cursor-default select-text">
             Політика конфіденційності
-          </a>
+          </span>
         </div>
       </div>
     </footer>

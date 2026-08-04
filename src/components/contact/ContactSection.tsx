@@ -115,15 +115,12 @@ export function ContactSection({ index = "04" }: { index?: string }) {
 
             <div className="mt-10 flex items-center gap-6">
               {site.social.map((s) => (
-                <a
+                <span
                   key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="label text-bone-dim transition-colors hover:text-gold"
+                  className="label cursor-default select-text text-bone-dim"
                 >
                   {s.short}
-                </a>
+                </span>
               ))}
             </div>
           </Reveal>
