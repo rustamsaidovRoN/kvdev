@@ -12,6 +12,7 @@ import {
   getNextProject,
   img,
   cityImageAlt,
+  projectCoverPositionClass,
 } from "@/lib/projects";
 
 export function generateStaticParams() {
@@ -184,7 +185,7 @@ export default async function ProjectPage({
           <img
             src={img(next.cover, 2000)}
             alt={next.name}
-            className="absolute inset-0 h-full w-full object-cover opacity-40 transition-all [transition-duration:1200ms] ease-out group-hover:scale-105 group-hover:opacity-55"
+            className={`absolute inset-0 h-full w-full object-cover opacity-40 transition-all [transition-duration:1200ms] ease-out group-hover:scale-105 group-hover:opacity-55 ${projectCoverPositionClass(next)}`}
           />
           <div className="absolute inset-0 bg-ink/40" />
           <div className="relative z-10 flex h-full flex-col items-center justify-center gap-5 text-center">

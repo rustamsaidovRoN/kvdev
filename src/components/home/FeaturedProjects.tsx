@@ -3,7 +3,12 @@
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { featuredProjects, img, type Project } from "@/lib/projects";
+import {
+  featuredProjects,
+  img,
+  projectCoverPositionClass,
+  type Project,
+} from "@/lib/projects";
 import { Reveal } from "@/components/motion/Reveal";
 import { ArrowRight } from "@/components/site/icons";
 
@@ -30,7 +35,7 @@ function Row({ project, i }: { project: Project; i: number }) {
               <img
                 src={img(project.cover, 1600)}
                 alt={project.name}
-                className="h-full w-full object-cover transition-transform [transition-duration:1200ms] ease-out group-hover:scale-105"
+                className={`h-full w-full object-cover transition-transform [transition-duration:1200ms] ease-out group-hover:scale-105 ${projectCoverPositionClass(project)}`}
               />
             </motion.div>
             <div className="label absolute left-5 top-5 bg-ink/55 px-3 py-1.5 text-bone backdrop-blur-sm">

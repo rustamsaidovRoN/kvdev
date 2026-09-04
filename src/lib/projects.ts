@@ -223,3 +223,9 @@ export function getNextProject(slug: string): Project {
   const i = projects.findIndex((p) => p.slug === slug);
   return projects[(i + 1) % projects.length];
 }
+
+export function projectCoverPositionClass(project: Pick<Project, "slug">): string {
+  return project.slug === "veletni" || project.slug === "kozyn-7-club"
+    ? "object-left md:object-center"
+    : "object-center";
+}

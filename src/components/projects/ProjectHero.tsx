@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { img, type Project } from "@/lib/projects";
+import { img, projectCoverPositionClass, type Project } from "@/lib/projects";
 import { ArrowRight } from "@/components/site/icons";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -25,7 +25,7 @@ export function ProjectHero({ project }: { project: Project }) {
         <img
           src={img(project.cover, 2400)}
           alt={project.name}
-          className="h-[115%] w-full animate-k-zoom object-cover"
+          className={`h-[115%] w-full animate-k-zoom object-cover ${projectCoverPositionClass(project)}`}
         />
       </motion.div>
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/35 to-ink/55" />

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { projects, img } from "@/lib/projects";
+import { img, projectCoverPositionClass, projects } from "@/lib/projects";
 import { ArrowUpRight } from "@/components/site/icons";
 
 export function ProjectsIndex() {
@@ -64,7 +64,7 @@ export function ProjectsIndex() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover object-center"
                 />
               </AnimatePresence>
             </div>
@@ -84,7 +84,7 @@ export function ProjectsIndex() {
               <img
                 src={img(p.cover, 1200)}
                 alt={p.name}
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 ${projectCoverPositionClass(p)}`}
               />
               <div className="label absolute left-4 top-4 bg-ink/55 px-3 py-1.5 text-bone backdrop-blur-sm">
                 {p.status}
