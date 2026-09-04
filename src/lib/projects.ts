@@ -138,7 +138,7 @@ export const projects: Project[] = [
       "Консьєрж 24/7",
       "Зарядка для авто",
     ],
-    cover: IMG.ex5,
+    cover: "/images/project-veletni-cover.jpg",
     gallery: [IMG.ex7, IMG.in1, IMG.ct2, IMG.in2],
   },
   {
@@ -173,7 +173,7 @@ export const projects: Project[] = [
       "Ландшафтний парк",
       "Два рівні паркінгу",
     ],
-    cover: IMG.ex3,
+    cover: "/images/project-kozyn-7-club-cover.jpg",
     gallery: [IMG.ex6, IMG.in1, IMG.ex4, IMG.ct2],
   },
   {
