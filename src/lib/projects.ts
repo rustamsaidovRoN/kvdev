@@ -224,8 +224,14 @@ export function getNextProject(slug: string): Project {
   return projects[(i + 1) % projects.length];
 }
 
-export function projectCoverPositionClass(project: Pick<Project, "slug">): string {
+export function projectCoverObjectPosition(project: Pick<Project, "slug">): string {
   return project.slug === "veletni" || project.slug === "kozyn-7-club"
-    ? "object-left md:object-center"
-    : "object-center";
+    ? "left center"
+    : "center center";
+}
+
+export function projectCoverTransformOrigin(project: Pick<Project, "slug">): string {
+  return project.slug === "veletni" || project.slug === "kozyn-7-club"
+    ? "left center"
+    : "center center";
 }

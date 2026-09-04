@@ -3,7 +3,12 @@
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { img, projectCoverPositionClass, projects } from "@/lib/projects";
+import {
+  img,
+  projectCoverObjectPosition,
+  projectCoverTransformOrigin,
+  projects,
+} from "@/lib/projects";
 import { ArrowUpRight } from "@/components/site/icons";
 
 export function ProjectsIndex() {
@@ -64,6 +69,10 @@ export function ProjectsIndex() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                  style={{
+                    objectPosition: projectCoverObjectPosition(current),
+                    transformOrigin: projectCoverTransformOrigin(current),
+                  }}
                   className="absolute inset-0 h-full w-full object-cover object-center"
                 />
               </AnimatePresence>
@@ -84,7 +93,11 @@ export function ProjectsIndex() {
               <img
                 src={img(p.cover, 1200)}
                 alt={p.name}
-                className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 ${projectCoverPositionClass(p)}`}
+                style={{
+                  objectPosition: projectCoverObjectPosition(p),
+                  transformOrigin: projectCoverTransformOrigin(p),
+                }}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="label absolute left-4 top-4 bg-ink/55 px-3 py-1.5 text-bone backdrop-blur-sm">
                 {p.status}
