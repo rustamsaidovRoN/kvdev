@@ -208,8 +208,13 @@ export const projects: Project[] = [
       "Керуюча компанія",
       "Паркінг для резидентів",
     ],
-    cover: IMG.ex7,
-    gallery: [IMG.in2, IMG.ex5, IMG.ct2, IMG.in1],
+    cover: "/images/project-vo-cover.jpg",
+    gallery: [
+      "/images/project-vo-cover.jpg",
+      "/images/project-vo-gallery-2.jpg",
+      "/images/project-vo-gallery-3.jpg",
+      "/images/project-vo-cover.jpg",
+    ],
   },
 ];
 
