@@ -86,6 +86,7 @@ export const projects: Project[] = [
     ],
     locationText:
       "Тиха 19 розташована в одному з тих рідкісних місць Печерська, про які знають переважно лише сусіди. Схована серед зелених схилів, вона дарує відчуття заміського спокою всього за кілька хвилин від ділового та культурного центру Києва.",
+    locationImage: "/images/location-tykha-19.jpg",
     specs: [
       { label: "Площа", value: "5 000 м²" },
       { label: "Поверховість", value: "5" },
@@ -140,7 +141,7 @@ export const projects: Project[] = [
       "Зарядка для авто",
     ],
     cover: "/images/project-veletni-cover.jpg",
-    locationImage: "/images/project-veletni-007.jpg",
+    locationImage: "/images/location-koncha-zaspa.jpg",
     gallery: [
       "/images/project-veletni-001.jpg",
       "/images/project-veletni-002.jpg",
@@ -183,6 +184,7 @@ export const projects: Project[] = [
       "Два рівні паркінгу",
     ],
     cover: "/images/project-kozyn-7-club-cover.jpg",
+    locationImage: "/images/location-koncha-zaspa.jpg",
     gallery: [IMG.ex6, IMG.in1, IMG.ex4, IMG.ct2],
   },
   {
@@ -215,6 +217,7 @@ export const projects: Project[] = [
       "Підземний паркінг",
     ],
     cover: "/images/project-vo-006.jpg",
+    locationImage: "/images/location-koncha-zaspa.jpg",
     gallery: [
       "/images/project-vo-001.jpg",
       "/images/project-vo-002.jpg",
