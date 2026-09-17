@@ -57,7 +57,7 @@ export function img(base: string, w = 1600): string {
 export const heroImage = "/images/home-hero.png";
 export const cityImage = IMG.ct2;
 export const cityImageAlt = IMG.ct1;
-export const manifestoImage = IMG.in1;
+export const manifestoImage = "/images/home-philosophy.jpg";
 
 export const statusLabels: Record<StatusKey, string> = {
   construction: "Будується",
