@@ -1,0 +1,24 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="72" fill="#0B0B0A"/>
+  <rect x="34" y="34" width="444" height="444" rx="48" stroke="#B89B63" stroke-width="10"/>
+  <text
+    x="256"
+    y="242"
+    fill="#F3EEE2"
+    font-family="Cormorant Garamond, Cormorant, Georgia, serif"
+    font-size="132"
+    font-weight="500"
+    letter-spacing="10"
+    text-anchor="middle"
+  >KV</text>
+  <text
+    x="256"
+    y="326"
+    fill="#B89B63"
+    font-family="Manrope, Arial, sans-serif"
+    font-size="48"
+    font-weight="500"
+    letter-spacing="18"
+    text-anchor="middle"
+  >DEV</text>
+</svg>

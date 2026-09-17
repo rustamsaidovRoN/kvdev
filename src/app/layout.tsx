@@ -27,9 +27,48 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KV DEV — девелопер преміальної нерухомості у Києві",
+  metadataBase: new URL("https://www.kvdev.group"),
+  title: {
+    default: "KV DEV — De Luxe житлові простори у Києві та Конча-Заспі",
+    template: "%s | KV DEV",
+  },
   description:
-    "KV DEV створює житлові простори класу De Luxe у Києві. Архітектура, матеріали та приватний сервіс, об'єднані бездоганною увагою до деталі.",
+    "KV DEV створює житлові простори класу De Luxe у Києві та Конча-Заспі. Архітектура, локація, матеріали та приватний сервіс, підпорядковані ідеї досконалості життя.",
+  applicationName: "KV DEV",
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
+  openGraph: {
+    title: "KV DEV — De Luxe житлові простори у Києві та Конча-Заспі",
+    description:
+      "Девелопер преміальної нерухомості: Тиха 19, VELETNI, KOZYN 7 CLUB та VO.",
+    url: "https://www.kvdev.group",
+    siteName: "KV DEV",
+    locale: "uk_UA",
+    type: "website",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "KV DEV — De Luxe житлові простори",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "KV DEV — De Luxe житлові простори",
+    description:
+      "Житлові простори класу De Luxe у Києві та Конча-Заспі.",
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
