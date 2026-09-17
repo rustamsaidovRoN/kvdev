@@ -43,6 +43,7 @@ export default async function ProjectPage({
   const project = getProject(slug);
   if (!project) notFound();
   const next = getNextProject(slug);
+  const showGallery = !["tykha-19", "kozyn-7-club"].includes(project.slug);
 
   return (
     <>
@@ -100,26 +101,27 @@ export default async function ProjectPage({
           </div>
         </section>
 
-        {/* gallery */}
-        <section className="py-12 md:py-20">
-          <div className="mx-auto max-w-edge px-5 md:px-10">
-            <div className="grid gap-4 md:grid-cols-12 md:gap-6">
-              {project.gallery.map((src, i) => {
-                const wide = i % 4 === 0 || i % 4 === 3;
+        {showGallery && (
+          <section className="py-12 md:py-20">
+            <div className="mx-auto max-w-edge px-5 md:px-10">
+              <div className="grid gap-4 md:grid-cols-12 md:gap-6">
+                {project.gallery.map((src, i) => {
+                  const wide = i % 4 === 0 || i % 4 === 3;
 
-                return (
-                  <GalleryImg
-                    key={`${src}-${i}`}
-                    src={src}
-                    alt={project.name}
-                    className={wide ? "md:col-span-8" : "md:col-span-4"}
-                    ratio={wide ? "aspect-[16/10]" : "aspect-[4/5] md:h-full"}
-                  />
-                );
-              })}
+                  return (
+                    <GalleryImg
+                      key={`${src}-${i}`}
+                      src={src}
+                      alt={project.name}
+                      className={wide ? "md:col-span-8" : "md:col-span-4"}
+                      ratio={wide ? "aspect-[16/10]" : "aspect-[4/5] md:h-full"}
+                    />
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* features */}
         <section className="border-t border-hair py-20 md:py-28">
