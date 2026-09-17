@@ -103,7 +103,7 @@ export const projects: Project[] = [
       "Пасажирський ліфт",
       "Комори від 6 до 15 м²",
     ],
-    cover: "/images/project-tykha-19-cover.png",
+    cover: "/images/project-tykha-19-cover.jpg",
     gallery: [IMG.in1, IMG.ex6, IMG.in2, IMG.ct1],
   },
   {
