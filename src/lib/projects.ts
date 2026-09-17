@@ -21,6 +21,7 @@ export interface Project {
   descriptionTitle?: string;
   description: string[];
   locationText?: string;
+  locationImage?: string;
   specs: ProjectSpec[];
   features: string[];
   cover: string;
@@ -139,7 +140,15 @@ export const projects: Project[] = [
       "Зарядка для авто",
     ],
     cover: "/images/project-veletni-cover.jpg",
-    gallery: [IMG.ex7, IMG.in1, IMG.ct2, IMG.in2],
+    locationImage: "/images/project-veletni-007.jpg",
+    gallery: [
+      "/images/project-veletni-001.jpg",
+      "/images/project-veletni-002.jpg",
+      "/images/project-veletni-003.jpg",
+      "/images/project-veletni-004.jpg",
+      "/images/project-veletni-005.jpg",
+      "/images/project-veletni-006.jpg",
+    ],
   },
   {
     slug: "kozyn-7-club",

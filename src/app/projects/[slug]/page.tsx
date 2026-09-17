@@ -177,8 +177,8 @@ export default async function ProjectPage({
               <Reveal delay={0.1} className="md:col-span-6 md:col-start-7">
                 <div className="overflow-hidden">
                   <img
-                    src={img(cityImageAlt, 1500)}
-                    alt="Київ"
+                    src={img(project.locationImage ?? cityImageAlt, 1500)}
+                    alt={project.locationImage ? project.district : "Київ"}
                     className="aspect-[16/11] w-full object-cover"
                   />
                 </div>
