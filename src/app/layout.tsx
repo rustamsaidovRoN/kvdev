@@ -26,14 +26,18 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteDescription =
+  "Ми створюємо житлові простори класу De Luxe у Києві та Конча-Заспі. Там, де форма, локація й матеріал підпорядковані одному — ідеї досконалості життя.";
+const featuredProjectsDescription =
+  "Знакові проєкти: KozynSevenClub, VELETNI, ТИХА19, VO.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kvdev.group"),
   title: {
     default: "KV DEV — інвестиційно-девелоперська компанія",
     template: "%s | KV DEV",
   },
-  description:
-    "Ми створюємо житлові простори класу de Luxe у Києві та Конча-Заспі. Там, де форма, локація й матеріал підпорядковані одному — ідеї досконалості життя. Знакові проєкти: KozynSevenClub, VELETNI, ТИХА19, VO.",
+  description: `${siteDescription} ${featuredProjectsDescription}`,
   applicationName: "KV DEV",
   alternates: {
     canonical: "/",
@@ -47,8 +51,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "KV DEV — інвестиційно-девелоперська компанія",
-    description:
-      "Ми створюємо житлові простори класу de Luxe у Києві та Конча-Заспі. Знакові проєкти: KozynSevenClub, VELETNI, ТИХА19, VO.",
+    description: `${siteDescription} ${featuredProjectsDescription}`,
     url: "https://www.kvdev.group",
     siteName: "KV DEV",
     locale: "uk_UA",
@@ -65,8 +68,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "KV DEV — інвестиційно-девелоперська компанія",
-    description:
-      "Ми створюємо житлові простори класу de Luxe у Києві та Конча-Заспі. Знакові проєкти: KozynSevenClub, VELETNI, ТИХА19, VO.",
+    description: `${siteDescription} ${featuredProjectsDescription}`,
     images: ["/images/og-image.jpg"],
   },
 };
