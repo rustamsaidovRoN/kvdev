@@ -104,10 +104,19 @@ export default async function ProjectPage({
         <section className="py-12 md:py-20">
           <div className="mx-auto max-w-edge px-5 md:px-10">
             <div className="grid gap-4 md:grid-cols-12 md:gap-6">
-              <GalleryImg src={project.gallery[0]} alt={project.name} className="md:col-span-8" ratio="aspect-[16/10]" />
-              <GalleryImg src={project.gallery[1]} alt={project.name} className="md:col-span-4" ratio="aspect-[4/5] md:h-full" />
-              <GalleryImg src={project.gallery[2]} alt={project.name} className="md:col-span-4" ratio="aspect-[4/5] md:h-full" />
-              <GalleryImg src={project.gallery[3]} alt={project.name} className="md:col-span-8" ratio="aspect-[16/10]" />
+              {project.gallery.map((src, i) => {
+                const wide = i % 4 === 0 || i % 4 === 3;
+
+                return (
+                  <GalleryImg
+                    key={`${src}-${i}`}
+                    src={src}
+                    alt={project.name}
+                    className={wide ? "md:col-span-8" : "md:col-span-4"}
+                    ratio={wide ? "aspect-[16/10]" : "aspect-[4/5] md:h-full"}
+                  />
+                );
+              })}
             </div>
           </div>
         </section>
